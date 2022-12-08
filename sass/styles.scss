@@ -1,0 +1,37 @@
+@use './sass_modules/initial';
+@use './sass_modules/variables' as v;
+@use './sass_modules/header';
+@use './sass_modules/navbar';
+@use './sass_modules/modal-navbar';
+@use './sass_modules/gallery';
+@use './sass_modules/details';
+@use './sass_modules/input';
+@use './sass_modules/modal-cart';
+@use './sass_modules/gallery-modal';
+
+
+.main-container {
+    width: 375px;
+    margin: auto;
+    position: relative;
+    @media (min-width: 1115px) {    
+            width: 1115px;  
+    }
+}
+.content {
+    @media (min-width: 1115px) {
+        display: flex;
+        padding: 90px 50px;
+        gap: 124px;
+    }
+}
+
+.show{
+    display: block;
+}
+.cart-empty {
+    font-weight: 700;
+    color: v.$Dark-grayish-blue;
+    text-align: center;
+    margin-top: 30px;
+}
