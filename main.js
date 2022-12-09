@@ -55,8 +55,8 @@ cartIconBtn.addEventListener('click', ()=> {
 
 })
 htmlBody.addEventListener('click', e => {
-    console.log(e.target.classList.value)
-    if("cart-modal__checkout-container" != e.target.classList.value && "header__cart-icon" != e.target.classList.value) {
+    // console.log(e.target.classList.value)
+    if("cart-modal__checkout-container" != e.target.classList.value && "header__cart-icon" != e.target.classList.value && 'cart-modal__title' != e.target.classList.value && 'cart-empty' != e.target.classList.value && "cart-modal show" != e.target.classList.value) {
         cartModal.classList.remove('show')
     }
 })
