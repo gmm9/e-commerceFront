@@ -41,9 +41,10 @@ const cartIconBtn = document.querySelector('.header__cart');
 const cartModal = document.querySelector('.cart-modal');
 // let priceModal = document.querySelector('.cart-modal__price')
 const productContainer = document.querySelector('.cart-modal__checkout-container')
+const htmlBody = document.querySelector('.main-container');
 
 cartIconBtn.addEventListener('click', ()=> {
-    cartModal.classList.toggle('show')
+    cartModal.classList.add('show')
 
     if(lastValue <= 0) {
         productContainer.innerHTML = `<p class="cart-empty">Your cart is empty</p>`;
@@ -53,6 +54,13 @@ cartIconBtn.addEventListener('click', ()=> {
     }
 
 })
+htmlBody.addEventListener('click', e => {
+    console.log(e.target.classList.value)
+    if("cart-modal__checkout-container" != e.target.classList.value && "header__cart-icon" != e.target.classList.value) {
+        cartModal.classList.remove('show')
+    }
+})
+
 
 // apagar os detalhes do carrinho
 function deleteProduct(){
@@ -62,7 +70,7 @@ function deleteProduct(){
         lastValue = 0;
         cartNotification.innerHTML = lastValue;
         cartNotification.style.display = 'none';
-        atualizaPrice()
+        // atualizaPrice()
         userInput.value = 0;
     })
 }
@@ -144,7 +152,7 @@ function drawProductInModal() {
 deleteProduct()
 let priceModal = document.querySelector('.cart-modal__price')
 priceModal.innerHTML = `$125.00 x${lastValue} <span>${lastValue * 125}.00</span>`
-atualizaPrice()
+// atualizaPrice()
 }
 
 function changeNextImage(index) {
@@ -200,14 +208,13 @@ modalNavbar.addEventListener('click', e => {
 
 const priceHome = document.querySelector('.details__prices');
 
-priceHome.innerHTML = `<p class="details__now">$125.00 <span class="details__discount">50%</span></p>
-<p class="details__before">$250.00</p>`
 
-function atualizaPrice(){
-if (lastValue > 0) {
-    priceHome.innerHTML = `<p class="details__now">$${125 * lastValue}.00 <span class="details__discount">50%</span></p>
-    <p class="details__before">$${250 * lastValue}.00</p>`
-} else {
-    priceHome.innerHTML = `<p class="details__now">$125.00 <span class="details__discount">50%</span></p>
-    <p class="details__before">$250.00</p>`
-}}
+
+// function atualizaPrice(){
+// if (lastValue > 0) {
+//     priceHome.innerHTML = `<p class="details__now">$${125 * lastValue}.00 <span class="details__discount">50%</span></p>
+//     <p class="details__before">$${250 * lastValue}.00</p>`
+// } else {
+//     priceHome.innerHTML = `<p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+//     <p class="details__before">$250.00</p>`
+// }}

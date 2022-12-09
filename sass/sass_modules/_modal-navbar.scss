@@ -4,7 +4,7 @@
 .modal-navbar{
     &__background {
         @include mixins.modal-background;
-        // height: 1000px;
+        height: 1000px;
 
         // display: none;
     }

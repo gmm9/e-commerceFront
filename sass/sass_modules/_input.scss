@@ -7,8 +7,10 @@
     background-color: v.$Light-grayish-blue;
     // align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
     &__minus {
        @include mixins.changeNumber(24px, 5px);
+       margin-left: 30px;
     }
     &__number{
         width: 100%;
@@ -21,6 +23,7 @@
         background-color: v.$Light-grayish-blue;
     }
     &__plus {
+       margin-right: 30px;
         @include mixins.changeNumber(19px, 3px);
     }
     
