@@ -11,8 +11,7 @@
 
 ## 🗃 Descrição
 
-<p>Projeto muito legal e divertido da <a href="https://www.frontendmentor.io/challenges" target="_blank">FrontendMentor</a> onde se desafia para concluir o que é proposto, nesse desafio me desafiei usando SCSS, onde obtive sucesso ao criar modals pela primeira vez, e podendo concluir esse projeto. Usado simples sintaxe de JS
-apenas com DOM para manipular toda a página.</p>
+<p>Projeto muito legal e divertido da <a href="https://www.frontendmentor.io/challenges" target="_blank">FrontendMentor</a> onde se desafia para concluir o projeto que é proposto, nesse desafio me conclui usando SCSS, onde obtive sucesso ao criar modals pela primeira vez, e podendo usar a criatividade neste projeto. Usado simples uma simples sintaxe de JS, apenas o DOM foi usado para manipular toda o HTML.</p>
 
 ## 💡 Informações do projeto
 
