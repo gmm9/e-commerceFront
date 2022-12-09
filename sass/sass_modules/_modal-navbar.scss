@@ -4,9 +4,14 @@
 .modal-navbar{
     &__background {
         @include mixins.modal-background;
-        height: 1000px;
-
-        // display: none;
+        // height: 1000px;
+        background-color: hsla(0deg, 0%, 0%, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;/*viewport width*/
+        height: 100vh;/*viewport height*/
+        z-index: 2;
     }
     background-color: variables.$White;
     width: 250px;
